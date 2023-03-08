@@ -11,11 +11,6 @@ def get_data(location, days, kind):
     values = 8 * days
     filter_data = filter_data[:values]
 
-    if kind == 'Graph':
-        filter_data = [dict['main']['temp'] for dict in filter_data]
-    if kind == 'Sky':
-        filter_data = [dict['weather'][0]['main'] for dict in filter_data]
-
     return filter_data
 
 
